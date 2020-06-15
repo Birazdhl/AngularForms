@@ -87,5 +87,17 @@
 
 // Simple Validation
 
- 1.) Import Validator from anguler/forms
-2.) and use it in components
+6.) Import Validator from anguler/forms
+7.) and use it in components
+
+// Custom Validation
+    userName.validator.ts
+
+// Cross Field Valiations
+    password.validator.ts
+
+// Conditional Validation
+     Email Validation		
+
+    
+   
