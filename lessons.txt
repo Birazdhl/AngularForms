@@ -23,3 +23,69 @@
     -> The Control value is valid => ng-valid,ng-invalid 
 
 11.) #name="ngModel" to keep the reference for the DOM
+
+// Valdiation with visual Feedback
+
+ 12.) [class.is-invalid]="name.invalid && name.touched"
+
+
+13.)(ngSubmit)="onSubmit()" and call it
+14.) call enrollService pass userModel
+
+
+// ExpressServer to receive form data
+ 15.) Create a folder called server
+ 16.) open in cmd and npm init --yes
+17.) npm install --save express body-parser cors
+18.) add a filer server.js and add add neccesery 
+19.) *ngIf="!submitted" for after submiting form
+
+// Reactive Forms
+
+1.) Add ReactiveFormsModule in aap.module.ts from '@angular/forms' and add it in imports array
+2.) Create FromGroup() from the module in respective components 
+    registrationForm = new FormGroup({
+     userName: new FormControl('Biraz'),
+     password: new FormControl(''),
+     confirmPassword: new FormControl(''),
+ });
+3.)  [formGroup]="registrationForm"
+4.)       <input formControlName="userName" type="text" class="form-control">
+
+// Managing Control Values
+
+    loadApiData(){
+   this.registrationForm.setValue({
+      userName: 'Biraz',
+      password: 'Dahal',
+      confirmPassword: 'test',
+      address: {
+        city: 'City',
+        state : 'State',
+        postalCode : '123456'
+      }
+   })
+ } //There must be all data in setValue,, In order to set only some data use patch value
+
+
+// Managinf Control Value From FormBuilder Service
+
+5.) Import formBuilder in Constructor
+
+      constructor(private fb: FormBuilder){}
+       
+       registrationForm = this.fb.group({
+        userName: ['Biraz'],
+        password: [''],
+        confirmPassword: [''],
+        address: this.fb.group({
+          City: [''],
+          state: [''],
+          postalCode: ['']
+        })
+      }) 
+
+// Simple Validation
+
+ 1.) Import Validator from anguler/forms
+2.) and use it in components

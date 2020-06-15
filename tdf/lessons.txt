@@ -23,3 +23,35 @@
     -> The Control value is valid => ng-valid,ng-invalid 
 
 11.) #name="ngModel" to keep the reference for the DOM
+
+// Valdiation with visual Feedback
+
+ 12.) [class.is-invalid]="name.invalid && name.touched"
+
+
+13.)(ngSubmit)="onSubmit()" and call it
+14.) call enrollService pass userModel
+
+
+// ExpressServer to receive form data
+ 15.) Create a folder called server
+ 16.) open in cmd and npm init --yes
+17.) npm install --save express body-parser cors
+18.) add a filer server.js and add add neccesery 
+19.) *ngIf="!submitted" for after submiting form
+
+
+
+// Reactive Forms
+
+1.) Open app.module.ts and Import reactivFormsModule from '@angular/forms' and add in imports
+
+2.) Create form group in the component
+    registrationForm = new FormGroup({
+     userName: new FormControl(''),
+     password: new FormControl(''),
+     confirmPassword: new FormControl('')
+ });
+3.)  <form [formGroup]="registrationForm"> use to decalre forms
+4.) <input formControlName="userName" type="text" class="form-control"> to define value
+
