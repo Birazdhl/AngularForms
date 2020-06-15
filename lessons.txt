@@ -1,0 +1,25 @@
+
+1.) Create Project
+2.) add <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        on index.html
+3.)desing required form
+
+// Binding data with ngForm
+4.) import form modules on app.component.js
+5.) use #userForm="ngForm" to tract the value,, name must in important in a tag
+6.) use ngModelGroup="address" to tract group module
+
+// Binding Data To Model
+
+7.) ng generate class User to generate Model
+8.) Define it in its respective component
+9.) [ngModel]="userModel.name" use as this format
+10.) [(ngModel)] = "userModel.name" for two way binding
+
+// Tracking State and Validity
+
+    -> The Control has been visited => ng-touched , ng-untouched
+    -> The Control value has been changed => ng-dirty, ng-pristine
+    -> The Control value is valid => ng-valid,ng-invalid 
+
+11.) #name="ngModel" to keep the reference for the DOM
